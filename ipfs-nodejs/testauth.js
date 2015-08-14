@@ -27,9 +27,7 @@ router.get('/', function (req, res, next) {
                 res.on('readable', function () {
                     var part = res.read().toString();
                     string += part;
-                    console.log('stream data' + string);
                     obj = JSON.parse(string);
-                    console.log(obj);
                     callback(obj);
                 })
 
@@ -42,7 +40,6 @@ router.get('/', function (req, res, next) {
 
     //callback to wait for ipfs response
     wait(hashs, function (obj) {
-        console.log(obj);
         res.render('testauth', {
             title: 'Your Web Page Title',
             object: obj
