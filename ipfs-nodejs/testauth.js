@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 
-//can take from form action as validation, pfs peer id's are public, data privacy not available currently  
+//can take from form action as validation, ipfs peer ids are public, data privacy not available currently  
 router.get('/', function (req, res, next) {
     hashs = "QmZTkaNJgi8EoggtzAubT8qPxfhvyqVg5AUMt3ChW3hv7V";
     function wait(hashs, callback) {
